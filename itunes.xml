@@ -1,0 +1,42 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>{{ site.podcastTitle }}</title>
+        <description> {{ site.podcastDescription }} </description>
+        <language>en-GB</language>
+        <link>{{ site.podcastWebsite }}</link>
+        <image>
+            <url>{{ site.podcastImage }}</url>
+            <title>{{ site.podcastTitle }}</title>
+            <link>{{ site.podcastWebsite }}</link>
+        </image>
+
+        <itunes:image>{{ site.podcastImage }}</itunes:image>
+        <itunes:category text="Video Games"/>
+        <itunes:explicit>true</itunes:explicit>
+        <itunes:author> {{ site.podcastAuthor }} </itunes:author>
+        <itunes:type>episodic</itunes:type>
+
+        {% for episode in site.episodes %}
+        <item>
+            <title>{{ episode.title }}</title>
+            <description>{{ episode.description }}</description>
+            <itunes:duration>{{ episode.duration }}</itunes:duration>
+            <link>{{site.url}}{{ episode.url }}</link>
+            <guid isPermaLink="true">{{ episode.url }}</guid>
+            <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
+            <author>{{ site.podcastAuthor }}</author>
+            <itunes:image>{{ episode.showArt }}</itunes:image>
+            <itunes:explicit>true</itunes:explicit>
+            {% if episode.hidden %}<itunes:block>Yes</itunes:block>{% endif %}
+            <enclosure url="{{ site.url }}/audio/{{episode.slug}}.mp3" length="{{ episode.length }}" type="audio/mpeg" />
+
+        </item>
+        {% endfor %}
+
+    </channel>
+</rss>
