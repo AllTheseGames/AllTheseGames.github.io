@@ -1,17 +1,17 @@
-! All These Games Website
+# All These Games Website
 
 This repository contains the website for the All These Games And Nothing To Play podcast, powered by the Jekyll static generator.
 
 The primary purpose of this website is to generate a Podcast RSS feed for listing the show on podcast networks, but posts and other content can also be added.
 
-!! Adding episodes
+## Adding episodes
 
 * Add a new file to `_episodes` with filename `eXXX.md`.
 * Add the required frontmatter per the example below.
 * Upload show audio to `audio`.
 * Upload show art to `assets`, with filename `epXXXart.jpg`.
 
-!!! Example episode frontmatter
+### Example episode frontmatter
 
 ```
 ---
@@ -27,12 +27,12 @@ hidden: false
 ---
 ```
 
-!! Adding posts
+## Adding posts
 
 * Add a new file to `_posts` with filename `YYYY-MM-DD-hyphenated-title.md`.
 * Add the required frontmatter per the example below.
 
-!!! Example post frontmatter
+### Example post frontmatter
 
 ```
 ---
