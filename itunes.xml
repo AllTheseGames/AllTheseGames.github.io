@@ -30,7 +30,7 @@ layout: null
             <guid isPermaLink="true">{{ episode.url }}</guid>
             <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
             <author>{{ site.podcastAuthor }}</author>
-            <itunes:image>{{ episode.showArt }}</itunes:image>
+            <itunes:image>{{site.url}}{{ episode.showArt }}</itunes:image>
             <itunes:explicit>true</itunes:explicit>
             {% if episode.hidden %}<itunes:block>Yes</itunes:block>{% endif %}
             <enclosure url="{{ site.url }}/audio/{{episode.slug}}.mp3" length="{{ episode.length }}" type="audio/mpeg" />

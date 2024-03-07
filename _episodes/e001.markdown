@@ -2,7 +2,7 @@
 layout: post
 title:  "E001: This was Podcasting!"
 description: "An episode about podcasting"
-showArt: https://example.com/podcast/ep002art.jpg
+showArt: /podcast/ep002art.jpg
 date:   2024-03-02 21:58:10 +0100
 duration: 3600
 length: 43200000
