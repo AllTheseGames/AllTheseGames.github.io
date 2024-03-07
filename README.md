@@ -8,7 +8,7 @@ The primary purpose of this website is to generate a Podcast RSS feed for listin
 
 * Add a new file to `_episodes` with filename `eXXX.md`.
 * Add the required frontmatter per the example below.
-* Upload show audio to `audio`.
+* Upload show audio to `audio` with filename `eXXX.mp3`.
 * Upload show art to `assets`, with filename `epXXXart.jpg`.
 
 ### Example episode frontmatter
